@@ -2,8 +2,10 @@ class next extends Phaser.Scene {
   constructor() {
     super("next");
   }
-  init(data) {
+  init(choice, story) {
     this.situation = data.situation;
+    this.step = 
+    this.story = story
   }
   preload() {
     this.load.image("image", "assets/spritesheets/image.png");

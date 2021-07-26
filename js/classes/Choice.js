@@ -7,7 +7,7 @@ class Choice extends Phaser.GameObjects.Container {
             0,
             choice.image
           )
-        let text = scene.add.text(0, 30, choice.text, { font: '"Press Start 2P"' });
+        let text = scene.add.text(0, 30, choice.description, { font: '"Press Start 2P"' });
         super(scene, x, y, [image, text]);
 
         image.setInteractive();
