@@ -23,17 +23,17 @@
     "transitions": {
         "first": [
             {
-                "decision": "A",
+                "decision": "Próximo",
                 "to":"pagina_2"
             }
         ],
         "pagina_2":[
             {
-                "decision": "sim",
+                "decision": "Abelardo aceita o conselho da mãe e abre um espaço na agenda para antender os humildes",
                 "to":"pagina_3"
             },
             {
-                "decision": "não",
+                "decision": "Abelardo espera mais um pouco até adquirir fortuna suficiente para conseguir ajudar os outros com mais facilidade",
                 "to":"pagina_4"
             }
         ]

@@ -1,17 +1,20 @@
 class Choice extends Phaser.GameObjects.Container {
 
-    constructor(x,y,choice, click) {
-        let image = new Phaser.GameObjects.Sprite(
-            scene,
-            0,
-            0,
-            choice.image
-          )
-        let text = scene.add.text(0, 30, choice.description, { font: '"Press Start 2P"' });
-        super(scene, x, y, [image, text]);
+    constructor(x,y,decision, click) {
 
-        image.setInteractive();
-        image.on("pointerdown",click); 
+        let style = { 
+            fontSize: 24,
+            fontFamily: 'Arial',
+            align: "left",
+            wordWrap: { width: 300, useAdvancedWrap: true }
+        }
+
+
+        let text = scene.add.text(0, 30, decision, style);
+        super(scene, x, y, [text]);
+
+        text.setInteractive();
+        text.on("pointerdown",click); 
         scene.add.existing(this);
     }
 }
