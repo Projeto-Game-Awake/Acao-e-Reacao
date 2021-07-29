@@ -25,7 +25,7 @@ console.log("CHOICE", choice)
             fontSize: 24,
             fontFamily: 'Arial',
             align: "left",
-            wordWrap: { width: 450, useAdvancedWrap: true }
+            wordWrap: { width: 600, useAdvancedWrap: true }
         }
         let text = scene.add.text(screenWidth - border.right, border.top, choice.description, style);
 

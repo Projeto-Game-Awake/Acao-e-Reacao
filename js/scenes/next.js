@@ -3,14 +3,13 @@ class next extends Phaser.Scene {
     super("next");
   }
   // init(choice, currentstep, story_config) {
-    init(data){
+  init(data) {
     this.choice = data.choice;
     this.current_step = data.currentstep;
-    this.image = data.choice.image;
     this.story_config = data.story_config
   }
 
-  update(){
+  update() {
     this.cameras.main.setBackgroundColor('rgba(255, 255, 255, 1)');
   }
 
@@ -18,32 +17,26 @@ class next extends Phaser.Scene {
     scene = this;
     let story_config = this.story_config
 
-    let transitions = story_config.transitions
     let steps = story_config.steps;
 
-    let nextSteps = transitions[this.current_step];
+    let currentstepInfo = steps[this.current_step];
+    let decisions = currentstepInfo.decision
 
     const screenWidth = scene.cameras.main.width;
     new StepInfo(this.choice)
-    
-    for(let i in nextSteps) {
-      let transition = nextSteps[i];
-      let choice = steps[transition.to]
 
-      let click = function() {
-        if(typeof transition.end === "undefined") {
-          scene.scene.start("next", {
-            choice,
-            currentstep: transition.to, 
-            story_config
-          });
-        } else {
-          scene.scene.start("end", {
-            "choice": transition.end
-          });
-        }
+    for (let i in decisions) {
+      let decision = decisions[i];
+      let choice = steps[decision.to]
+
+      let click = function () {
+        scene.scene.start("next", {
+          choice,
+          currentstep: decision.to,
+          story_config
+        });
       }
-      let choiceContainer = new Choice(screenWidth/2 + i*300,300 , transition.decision, click);
+      let choiceContainer = new Choice(screenWidth / 2 + i * 300, 500, decision.text, click);
     }
   }
 }
