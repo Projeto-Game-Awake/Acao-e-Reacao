@@ -1,0 +1,178 @@
+{
+    "title": "O homem faz o que quer, mas sempre responderá por aquilo que fizer",
+    "images": [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26" ],
+    "steps": {
+        "first": {
+            "description": "Dr. Abelardo Tourinho é uma pessoa dotada de extraordinária inteligência. Advogado de renome, não conhecia derrotas. Era extremamente respeitado como um dos melhores advogados do estado em que morava. Trabalhava em uma das empresas mais importantes de advocacia",
+            "image": "1",
+            "decision":[
+                {
+                    "text": "Próximo",
+                    "to": "pagina_2"
+                }
+            ]
+        },
+        "pagina_2": {
+            "description": "Dona Leona, mãe de Abelardo, preocupava-se com o prestígio do filho e, muitas vezes o advertiu: 'Não trabalho apenas pelo dinheiro, Abelardo. Nunca te vi ajudando os humildes'",
+            "image": "2",
+            "decision":[
+                {
+                    "text": "Abelardo aceita o conselho da mãe e abre um espaço na agenda para atender os humildes?",
+                    "to": "pagina_3"
+                },
+                {
+                    "text": "Abelardo espera mais um pouco até adquirir fortuna suficiente para conseguir ajudar os outros com mais facilidade?",
+                    "to": "pagina_11"
+                }
+
+            ]
+
+        },
+        "pagina_3": {
+            "description": "Abelardo preocupa-se com a advertência da mãe e abre um espaço de uma vez por semana, em sua casa, para atender os humildes. O primeiro caso que aparece é Agenor, homem simples que trabalhava como jardineiro. Ele conta que foi mandado embora do emprego por estar doente. E além disso, conta que o patrão não o remunerou como manda a lei e sua família (mulher e 5 filhos), passam fome. Abelardo conhece o patrão de Agenor: Era Otávio, Sócio da empresa em que Abelardo trabalha e um homem muito rico e influente. Certamente, se Abelardo defender Agenor, quem vai para a Rua é ele. E o pior: dificilmente vai conseguir emprego em empresas grandes, devido a influência de Otávio. VOCÊ DECIDE: Abelardo defende Agenor?",
+            "image": "3",
+            "decision":[
+                {
+                    "text": "Sim",
+                    "to": "pagina_4"
+                },
+                {
+                    "text": "Não",
+                    "to": "pagina_18"
+                }
+
+            ]
+        },
+        "pagina_4": {
+            "description": "Abelardo segue a consciência e defende Agenor. A primeira coisa que faz é procurar Otávio para propor resolver a questão. Mas Otávio é decisivo: 'Ou você larga o caso ou está fora desta empresa! Acredite, você não conseguirá emprego novamente! Isso eu te prometo!'",
+            "image": "4",
+            "decision":[
+                {
+                    "text": "Sim",
+                    "to": "pagina_18"
+                },
+                {
+                    "text": "Não",
+                    "to": "pagina_5"
+                }
+
+            ]
+        },
+        "pagina_5": {
+            "description": "Abelardo vence o caso. 'Vou ficar eternamente grato ao senhor, doutor.' — Diz Agenor. Mas Abelardo perde o emprego e é obrigado a trabalhar em escritório próprio. Mas os clientes grandes, esses acabaram. As dificuldades de Abelardo começaram. Mas um dia aparece em seu escritório o Sr. Evaristo Penna, deputado famoso. Conhecia a fama de Abelardo e queria contratá-lo. Era acusado de corrupção e desvio de dinheiro público. 'Mas todos fazem assim, dr. Abelardo. E só eu pagarei o pato?'. Ofereceu a Abelardo enorme quantia em dinheiro para o defender. 'É uma oportunidade de ouro e, afinal, quem cometeu o crime não fui eu, foi o deputado.' — pensava Abelardo examinando o caso.",
+            "image": "5",
+            "decision":[
+                {
+                    "text": "Sim",
+                    "to": "pagina_19"
+                },
+                {
+                    "text": "Não",
+                    "to": "pagina_7"
+                }
+
+            ]
+        },
+        "pagina_6": {
+            "description": "A mãe de Abelardo piora pouco a pouco. Os médicos não conseguem ajudá-la. E, infelizmente, Abelardo vê a mãe piorar até desencarnar.",
+            "image": "6",
+            "decision":[
+                {
+                    "text": "Próxima",
+                    "to": "pagina_12"
+                }
+            ]
+        },
+
+        "pagina_7": {
+            "description": "Abelardo fica miseravelmente pobre. Seus clientes, tão pobres como ele, não são uma boa fonte de renda. Agora, a mãe de Abelardo fica terrivelmente doente. Os médicos não sabem do que se trata e Abelardo não tem dinheiro para pagar médicos bons. Dona Leona é a única pessoa que Abelardo tem no mundo. O Deputado Evaristo volta a procurá-lo. Promete tratamento para a mãe se Abelardo fizer a defesa.",
+            "image": "7",
+            "decision":[
+                {
+                    "text": "Sim",
+                    "to": "pagina_19"
+                },
+                {
+                    "text": "Não",
+                    "to": "pagina_8"
+                }
+            ]
+        },
+
+        "pagina_8": {
+            "description": "Definitivamente, Abelardo não aceita o caso. A mãe piora gravemente. O médico diz que o melhor para ela é ficar em casa, para lá desencarnar. Agora veja bem:",
+            "image": "8",
+            "decision":[
+                {
+                    "text": "Se na página 4 você largou o caso de Agenor",
+                    "to": "pagina_16"
+                },
+                {
+                    "text": "Se defendeu Agenor",
+                    "to": "pagina_9"
+                }
+            ]
+        },
+
+        "pagina_9": {
+            "description": "Em casa, Dona Leona piora pouco a pouco. Um dia, batem à porta e Abelardo vai atender. Era Agenor, o jardineiro. 'Soube a situação que o senhor ficou por causa de ter me defendido.' Conversam um pouco e Agenor se desculpa. Abelardo conta sobre a mãe doente e Agenor pede para vê-la.",
+            "image": "9",
+            "decision":[
+                {
+                    "text": "Próxima",
+                    "to": "pagina_10"
+                }
+            ]
+        },
+        "pagina_10": {
+            "description": "Agenor vai até a mãe de Abelardo. Ele era um grande conhecedor de plantas e pediu a Abelardo para tentar ajudá-la. 'Claro! Não tenho mais nada a perder'. Agenor faz algumas bebericagens com ervas. Incrível! Dona Leona melhora aos poucos! 'Muito obrigado, senhor Agenor'. 'Ora, senhor Abelardo, uma mão lava a outra. O senhor foi tão bom para mim! Eu não podia fazer diferente'.",
+            "image": "10",
+            "decision":[
+                {
+                    "text": "Próxima",
+                    "to": "pagina_22"
+                }
+            ]
+        },
+        "pagina_11": {
+            "description": "Abelardo decide esperar um pouco. Afinal, quanto mais dinheiro tiver, melhor pode ajudar os outros futuramente. Mas a mãe de Abelardo adoece gravemente. Os médicos, mesmo os melhores, não conseguem ajudá-la.E,infelizmente, Abelardo vê a mãe piorar até desencarnar.",
+            "image": "11",
+            "decision":[
+                {
+                    "text": "Próxima",
+                    "to": "pagina_12"
+                }
+            ]
+        },
+
+        "pagina_12": {
+            "description": "Abelardo lembra do conselho da mãe.\nVOCÊ DECIDE: Ele tenta seguir o conselho agora?",
+            "image": "12",
+            "decision":[
+                {
+                    "text": "Sim",
+                    "to": "pagina_25"
+                },
+                {
+                    "text": "Não",
+                    "to": "pagina_13"
+                }
+            ]
+        },
+
+        "pagina_13": {
+            "description": "Abelardo lembra do conselho da mãe.\nVOCÊ DECIDE: Ele tenta seguir o conselho agora?",
+            "image": "13",
+            "decision":[
+                {
+                    "text": "Sim",
+                    "to": "pagina_25"
+                },
+                {
+                    "text": "Não",
+                    "to": "pagina_13"
+                }
+            ]
+        }
+    }
+}
