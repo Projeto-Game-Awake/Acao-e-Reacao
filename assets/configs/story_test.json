@@ -4,11 +4,27 @@
     "steps": {
         "first": {
             "description": "Dr. Abelardo Tourinho é uma pessoa dotada de extraordinária inteligência. Advogado de renome, não conhecia derrotas. Era extremamente respeitado como um dos melhores advogados do estado em que morava. Trabalhava em uma das empresas mais importantes de advocacia",
-            "image": "image_1"
+            "image": "image_1",
+            "decision":[
+                {
+                    "text": "Próximo",
+                    "to":"pagina_2"
+                }
+            ]
         },
         "pagina_2": {
             "description": "Dona Leona, mãe de Abelardo, preocupava-se com o prestígio do filho e, muitas vezes o advertiu: 'Não trabalho apenas pelo dinheiro, Abelardo. Nunca te vi ajudando os humildes'",
-            "image": "image_2"
+            "image": "image_2",
+            "decision":[
+                {
+                    "text": "Abelardo aceita o conselho da mãe e abre um espaço na agenda para antender os humildes",
+                    "to":"pagina_3"
+                },
+                {
+                    "text": "Abelardo espera mais um pouco até adquirir fortuna suficiente para conseguir ajudar os outros com mais facilidade",
+                    "to":"pagina_4"
+                }
+            ]
         },
         "pagina_3": {
             "description": "AAA",
@@ -18,24 +34,5 @@
             "description": "BBB",
             "image": "image_2"
         }
-
-    },
-    "transitions": {
-        "first": [
-            {
-                "decision": "Próximo",
-                "to":"pagina_2"
-            }
-        ],
-        "pagina_2":[
-            {
-                "decision": "Abelardo aceita o conselho da mãe e abre um espaço na agenda para antender os humildes",
-                "to":"pagina_3"
-            },
-            {
-                "decision": "Abelardo espera mais um pouco até adquirir fortuna suficiente para conseguir ajudar os outros com mais facilidade",
-                "to":"pagina_4"
-            }
-        ]
     }
 }
