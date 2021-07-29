@@ -3,7 +3,7 @@ var gameConfig = {
   type: Phaser.AUTO,
   scale: {
     parent: "FCG-board",
-    width: 800,
+    width: 1200,
     height: 700,
   },
   scene: [first,next,end],

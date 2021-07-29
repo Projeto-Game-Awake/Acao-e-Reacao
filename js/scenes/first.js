@@ -4,14 +4,16 @@ class first extends Phaser.Scene {
   }
   preload() {
     this.levelName = "story_test"
-
     let fileName = `assets/configs/${this.levelName}.json`
     console.log(fileName)
     this.load.json('story', fileName);
-
-
+    
+    
     this.load.image('image_1', `assets/images/story_test/image_1.png`);
     this.load.image('image_2', `assets/images/story_test/image_2.png`);
+  }
+  update(){
+    this.cameras.main.setBackgroundColor('rgba(255, 0, 0, 0.5)');
   }
   create() {
     this.story_config = this.cache.json.get('story');

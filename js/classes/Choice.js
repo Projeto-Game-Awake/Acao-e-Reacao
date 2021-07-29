@@ -11,6 +11,10 @@ class Choice extends Phaser.GameObjects.Container {
 
 
         let text = scene.add.text(0, 30, decision, style);
+
+        //  And now we'll color in some of the letters
+        text.setTint(0xff0000);
+        text.setOrigin(0,0)
         super(scene, x, y, [text]);
 
         text.setInteractive();

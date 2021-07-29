@@ -10,6 +10,10 @@ class next extends Phaser.Scene {
     this.story_config = data.story_config
   }
 
+  update(){
+    this.cameras.main.setBackgroundColor('rgba(255, 255, 255, 1)');
+  }
+
   create() {
     scene = this;
     let story_config = this.story_config
@@ -19,7 +23,8 @@ class next extends Phaser.Scene {
 
     let nextSteps = transitions[this.current_step];
 
-    new StepInfo(0,0, this.choice)
+    const screenWidth = scene.cameras.main.width;
+    new StepInfo(this.choice)
     
     for(let i in nextSteps) {
       let transition = nextSteps[i];
@@ -38,7 +43,7 @@ class next extends Phaser.Scene {
           });
         }
       }
-      let choiceContainer = new Choice(10 + i*400,300 , transition.decision, click);
+      let choiceContainer = new Choice(screenWidth/2 + i*300,300 , transition.decision, click);
     }
   }
 }
