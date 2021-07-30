@@ -27,13 +27,24 @@ console.log("CHOICE", choice)
             align: "left",
             wordWrap: { width: 600, useAdvancedWrap: true }
         }
-        let text = scene.add.text(screenWidth - border.right, border.top, choice.description, style);
 
+        let question = '';
+        if(typeof choice.question !== 'undefined') {
+            question =  '"' + choice.question + '"';
+        }
+
+        let text = scene.add.text(screenWidth - border.right, border.top, choice.description + question, style);
+        
         text.setOrigin(1,0)
 
             //  And now we'll color in some of the letters
         text.setTint(0xff0000);
-        super(scene, x, y, [image, text]);
+
+        if(typeof choice.image === 'undefined') {
+            super(scene, x, y, [text]);
+        } else {
+            super(scene, x, y, [image, text]);
+        }
 
         scene.add.existing(this);
     }

@@ -6,7 +6,7 @@ class next extends Phaser.Scene {
   init(data) {
     this.choice = data.choice;
     this.current_step = data.currentstep;
-    this.story_config = data.story_config
+    this.story_config = data.story_config;
   }
 
   update() {
@@ -25,18 +25,33 @@ class next extends Phaser.Scene {
     const screenWidth = scene.cameras.main.width;
     new StepInfo(this.choice)
 
-    for (let i in decisions) {
-      let decision = decisions[i];
-      let choice = steps[decision.to]
+    let back = this.add.image(0, 0, "voltar");
+    back.setOrigin(0,0)
+    back.setInteractive();
+    back.on("pointerdown",function() {
+      scene.scene.start("first");
+    });
 
-      let click = function () {
-        scene.scene.start("next", {
-          choice,
-          currentstep: decision.to,
-          story_config
-        });
+    if(typeof decisions === 'undefined') {
+      scene.scene.start("end", {
+        choice: this.choice,
+        currentstep: null,
+        story_config
+      });
+    } else {
+      for (let i in decisions) {
+        let decision = decisions[i];
+        let choice = steps[decision.to]
+  
+        let click = function () {
+          scene.scene.start("next", {
+            choice,
+            currentstep: decision.to,
+            story_config
+          });
+        }
+        let choiceContainer = new Choice(screenWidth / 2 + i * 300, 400, decision.text, click);
       }
-      let choiceContainer = new Choice(screenWidth / 2 + i * 300, 500, decision.text, click);
     }
   }
 }
