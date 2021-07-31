@@ -14,12 +14,13 @@ class end extends Phaser.Scene {
     let story_config = this.story_config
 
     const screenWidth = scene.cameras.main.width;
+    const screenHeight = scene.cameras.main.height;
     new StepInfo(this.choice)
     
-    let back = this.add.image(0, 0, "voltar");
-    back.setOrigin(0,0)
-    back.setInteractive();
-    back.on("pointerdown",function() {
+    let home = this.add.image(0, screenHeight-250, "home");
+    home.setOrigin(0,0)
+    home.setInteractive();
+    home.on("pointerdown",function() {
       scene.scene.start("first");
     });
 

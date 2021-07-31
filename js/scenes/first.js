@@ -7,6 +7,7 @@ class first extends Phaser.Scene {
     this.load.image('image_1', `assets/images/story_test/image_1.png`);
     this.load.image('image_2', `assets/images/story_test/image_2.png`);
     this.load.image('voltar', `assets/images/voltar.png`);
+    this.load.image('home', `assets/images/home.png`);
     
     let fileName = `assets/configs/${this.levelName}.json`    
     this.load.json('story', fileName); 
@@ -40,10 +41,12 @@ class first extends Phaser.Scene {
 
     text.setOrigin(0,0)
 
+    let stack = [];
     text.setInteractive();
     text.on("pointerdown",function() {
       scene.scene.start("next",{
-        choice, 
+        choice,
+        stack,
         currentstep:"first",
         story_config
       });

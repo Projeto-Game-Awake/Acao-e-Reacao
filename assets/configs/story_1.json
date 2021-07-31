@@ -44,7 +44,7 @@
         },
         "pagina_4": {
             "description": "Abelardo segue a consciência e defende Agenor. A primeira coisa que faz é procurar Otávio para propor resolver a questão. Mas Otávio é decisivo: 'Ou você larga o caso ou está fora desta empresa! Acredite, você não conseguirá emprego novamente! Isso eu te prometo!'",
-            "question":"VOCÊ DECIDE: Desistir a defender Agenor?",
+            "question":"VOCÊ DECIDE: Desistir de defender Agenor?",
             "image": "4",
             "decision":[
                 {
@@ -170,7 +170,7 @@
                 },
                 {
                     "text": "Não",
-                    "to": "pagina_13"
+                    "to": "pagina_14"
                 }
             ]
         },
