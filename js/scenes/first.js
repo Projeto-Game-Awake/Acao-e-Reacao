@@ -35,15 +35,19 @@ class first extends Phaser.Scene {
       fontSize: 80,
       fontFamily: 'Arial',
       align: "left",
-      wordWrap: { width: 600, useAdvancedWrap: true }
+      wordWrap: { width: 1200, useAdvancedWrap: true }
     }
     let text = scene.add.text(0, 30, this.story_config.title, style);
-
     text.setOrigin(0,0)
 
+    style.backgroundColor = '#68b5e9';
+    let touch = scene.add.text(350, 420, "Toque na tela", style);
+    touch.setOrigin(0,0)
+    touch.setPadding(64,16);
+
     let stack = [];
-    text.setInteractive();
-    text.on("pointerdown",function() {
+
+    this.input.on('pointerdown', function (pointer) {
       scene.scene.start("next",{
         choice,
         stack,

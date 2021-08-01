@@ -6,7 +6,7 @@ class Choice extends Phaser.GameObjects.Container {
             fontSize: 24,
             fontFamily: 'Arial',
             align: "left",
-            backgroundColor: '#2323CB',
+            backgroundColor: '#68b5e9',
             color:'#FFFFFF',
             wordWrap: { width: 300, useAdvancedWrap: true }
         }
@@ -15,6 +15,7 @@ class Choice extends Phaser.GameObjects.Container {
 
         //  And now we'll color in some of the letters
         text.setOrigin(0,0)
+        text.setPadding(64, 16);
         super(scene, x, y, [text]);
 
         text.setInteractive();

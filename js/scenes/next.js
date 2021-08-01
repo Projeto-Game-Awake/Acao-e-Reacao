@@ -76,7 +76,7 @@ class next extends Phaser.Scene {
             story_config
           });
         }
-        let choiceContainer = new Choice(screenWidth / 2 + i * 300, 400, decision.text, click);
+        let choiceContainer = new Choice(screenWidth / 2 - 190 + i * 430, 400, decision.text, click);
       }
     }
   }
